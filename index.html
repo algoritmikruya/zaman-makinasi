@@ -6,7 +6,8 @@
     <title>Kostüm ve Mimari Tarihi: Zaman Makinası</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Inter (for general text) and Dancing Script (for "Echos of Time") -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -57,7 +58,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.3); /* Hafif koyu overlay */
+            background-color: rgba(0,0,0,0.3); /* Hafif koyu overlay */
             z-index: 1; /* Overlay'in görselin üzerinde, metnin altında olmasını sağlar */
         }
         .period-main-card {
@@ -294,128 +295,12 @@
         .forum-submit-button:hover {
             background-color: #5a67d8; /* Daha açık mor */
         }
-
-        /* Custom Message Modal için özel stil */
-        #customMessageModal .modal-content-about {
-            max-width: 600px; /* Genişliği artır */
-            text-align: left; /* Metni sola hizala */
-        }
-        #customMessageModal .modal-content-about h4 {
-            display: none; /* Hakkında başlığını gizle */
-        }
-        #customMessageModal .modal-content-about p {
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Yazılara gölge eklendi */
-        }
-        #customMessageModal .modal-content-about a {
-            color: #4c51bf;
-            text-decoration: underline;
-        }
-        #customMessageModal .modal-content-about img {
-            width: 100%; /* Görselin alanı doldurmasını sağlar */
-            height: auto; /* Oranı korur */
-            border-radius: 0.5rem;
-            margin-top: 1.5rem; /* Yazı ile görsel arasına boşluk */
-        }
-        #customMessageModal .modal-content-about button {
-            font-size: 0.875rem; /* text-sm */
-            padding: 0.5rem 1rem; /* Daha küçük padding */
-            background-color: #d1d5db; /* Soluk gri */
-            color: #374151; /* Koyu gri yazı */
-            border: none;
-            transition: background-color 0.2s ease-in-out;
-        }
-        #customMessageModal .modal-content-about button:hover {
-            background-color: #9ca3af; /* Hover'da biraz daha koyu gri */
-        }
-
-        /* About Modal specific styles */
-        #aboutModal .modal-content-about {
-            max-width: 600px;
-            max-height: 90vh; /* Limit height to prevent cutting off on very small screens */
-            width: 95%; /* Responsive width */
-            background-color: #fff; /* Default background for content */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Add shadow */
-            border-radius: 0.5rem; /* Apply rounded corners */
-            display: flex;
-            flex-direction: column;
-            overflow: hidden; /* Hide overflowing content */
-            position: relative; /* For the background image */
-        }
-
-        #aboutModal .modal-content-about::before { /* Pseudo-element for background image */
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://raw.githubusercontent.com/algoritmikruya/sebnem/refs/heads/main/hakkinda.jpeg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.5); /* Darken the image for text readability */
-            z-index: 0; /* Behind the content */
-        }
-
-        #aboutModal .modal-content-about .about-content-wrapper { /* Wrapper for text and button */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1; /* Allow content to take available space */
-            padding: 2rem; /* General padding for content */
-            box-sizing: border-box;
-            color: white; /* Text color for content on dark background */
-            text-align: center;
-            position: relative; /* Above the pseudo-element background */
-            z-index: 1;
-        }
-
-        #aboutModal .modal-content-about .about-text-content { /* Just for the text */
-            flex-grow: 1; /* Allow text to grow */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center text vertically */
-            align-items: center; /* Center text horizontally */
-            overflow-y: auto; /* Enable scrolling for text if it overflows */
-            padding-bottom: 1rem; /* Space before button */
-        }
-
-        #aboutModal .modal-content-about .about-text-content p {
-            margin-bottom: 1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.9); /* Stronger shadow for text */
-            line-height: 1.6; /* Improved readability */
-            max-width: 90%; /* Limit text width for better readability */
-        }
-
-        #aboutModal .modal-content-about .about-text-content a {
-            color: #90cdf4;
-            text-decoration: underline;
-            text-shadow: none;
-        }
-
-        #aboutModal .modal-content-about .about-close-button {
-            margin-top: 1rem; /* Space from the text content */
-            font-size: 0.875rem;
-            padding: 0.75rem 1.5rem;
-            background-color: #d1d5db; /* Light gray */
-            color: #374151; /* Dark gray text */
-            border: none;
-            border-radius: 0.5rem;
-            transition: background-color 0.2s ease-in-out;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add a subtle shadow to the button */
-            align-self: center; /* Center the button horizontally */
-        }
-
-        #aboutModal .modal-content-about .about-close-button:hover {
-            background-color: #9ca3af;
-        }
     </style>
 </head>
 <body class="antialiased">
 
     <!-- Header Section -->
-    <header class="relative py-20 px-4 text-center rounded-b-lg shadow-md overflow-hidden" style="min-height: 400px;">
+    <header class="relative py-20 px-4 text-center rounded-b-lg shadow-md overflow-hidden">
         <!-- Header görselinin kapsayıcısı -->
         <div class="header-image-container">
             <div class="header-image-wrapper">
@@ -740,8 +625,6 @@
                 <a href="https://www.youtube.com/@Algoritmikruya" target="_blank" aria-label="YouTube Kanalı">
                     <i class="fab fa-youtube"></i>
                 </a>
-                <!-- Hakkında linki eklendi -->
-                <a href="#" onclick="window.showAboutModal(); return false;" class="text-white mx-2 hover:text-gray-300 transition-colors text-sm">Hakkında</a>
                 <a href="https://www.instagram.com/sebnemilker/" target="_blank" aria-label="Instagram Sayfası">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -756,33 +639,6 @@
             <img id="fullscreenImage" src="" alt="Tam Ekran Görsel">
         </div>
     </div>
-
-    <!-- Custom Message/Alert Modal (for general messages) -->
-    <div id="customMessageModal" class="fullscreen-modal">
-        <div class="bg-white rounded-lg p-6 shadow-xl w-full relative max-w-sm text-center">
-            <h4 id="customMessageTitle" class="text-xl font-bold mb-3"></h4>
-            <p id="customMessageText" class="text-gray-700 mb-4"></p>
-            <button id="customMessageButton" onclick="document.getElementById('customMessageModal').style.display='none';" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">Tamam</button>
-        </div>
-    </div>
-
-    <!-- About Modal (new, dedicated modal for About content) -->
-    <div id="aboutModal" class="fullscreen-modal">
-        <div class="rounded-lg shadow-xl w-full relative modal-content-about">
-            <!-- İçerik ve buton için sarıcı -->
-            <div class="about-content-wrapper">
-                <!-- Metin içeriği için sarıcı -->
-                <div class="about-text-content">
-                    <p><b>Şebnem İlker – Sanatın Zamansız Yolcusu</b></p>
-                    <p>Mimar Sinan Üniversitesi Güzel Sanatlar Fakültesi'nde aldığı Sahne Sanatları ve Dramaturji eğitimini yılların sahne deneyimiyle birleştiren bir sanat tutkunu. Geleneksel ve modern sanat formları arasında köprü kuran özgün çalışmalarıyla, görsel anlatımın sınırlarını teknolojiyle genişletiyor.</p>
-                    <p>Dizi ve film yapımcılığından yapay zeka destekli projelere uzanan yolculuğunda, sanatı geleceğe taşımak için yeni ifade biçimleri keşfediyor. Burada, geçmişin ruhunu, geleceğin teknolojisiyle buluşturuyor ve sanatın dönüştürücü gücüne inancını paylaşıyor.</p>
-                    <p><a href="https://www.imdb.com/name/nm10660421/" target="_blank">IMDb Profili</a></p>
-                </div>
-                <button onclick="document.getElementById('aboutModal').style.display='none';" class="about-close-button">Geri Dön</button>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Firebase SDKs -->
     <script type="module">
@@ -1441,7 +1297,7 @@
                         description: "Morning coat, silindir şapka ve yelek.",
                         images: [
                             "https://raw.githubusercontent.com/algoritmikruya/sebnem/main/viktorya/erkek-1.jpeg",
-                            "https://raw.githubusercontent.com/algoritmikruya/sebnem/main/viktorya/erkek-2.jpeg",
+                            "https://raw.githubusercontent.com/algoritmikruya/sebnorya/erkek-2.jpeg",
                             "https://raw.githubusercontent.com/algoritmikruya/sebnem/main/viktorya/erkek-3.jpeg",
                             "https://raw.githubusercontent.com/algoritmikruya/sebnem/main/viktorya/erkek-4.jpeg"
                         ],
@@ -2264,9 +2120,11 @@
                 `;
 
                 data.subSections.forEach(sub => {
+                    // Görsel URL'si boşsa veya yoksa yer tutucu metin göster
+                    const imageUrl = sub.images && sub.images.length > 0 && sub.images[sub.currentImageIndex] ? sub.images[sub.currentImageIndex] : `https://placehold.co/300x200/CCCCCC/666666?text=Görsel+Yok`;
                     detailsHtml += `
                         <div class="sub-section-card">
-                            <img id="img-${periodKey}-${sub.id}" src="${sub.images[sub.currentImageIndex]}" alt="${sub.title} Görseli" class="rounded-md mb-3" onclick="window.openImageFullscreen(this.src)" onerror="console.error('Görsel yüklenemedi: ' + this.src)">
+                            <img id="img-${periodKey}-${sub.id}" src="${imageUrl}" alt="${sub.title} Görseli" class="rounded-md mb-3" onclick="window.openImageFullscreen(this.src)" onerror="this.src='https://placehold.co/300x200/CCCCCC/666666?text=Görsel+Yüklenemedi'; console.error('Görsel yüklenemedi: ' + this.src);">
                             <h4 class="text-xl font-semibold mb-2 text-gray-700">${sub.title}</h4>
                             <p class="text-gray-600 text-sm mb-3">${sub.description}</p>
                             <button onclick="window.changeImage('${periodKey}', '${sub.id}')" class="bg-purple-600 text-white px-4 py-2 rounded-md hover:bg-purple-700 transition-colors text-sm">Görseli Değiştir</button>
@@ -2337,7 +2195,7 @@
                                 <div class="forum-message-header">
                                     <span class="forum-message-user">Kullanıcı</span>
                                     <span class="forum-message-time">${timeString}</span>
-                                </div>
+                                    </div>
                                 <p class="forum-message-text">${post.message}</p>
                             </div>
                         `;
@@ -2360,6 +2218,8 @@
         window.addForumPost = async function(periodKey) {
             if (!db || !isAuthReady) {
                 console.warn("Firestore veya kimlik doğrulama henüz hazır değil. Mesaj gönderilemiyor.");
+                // showCustomMessage yerine console.error kullanıldı
+                console.error("Firestore veya kimlik doğrulama henüz hazır değil. Mesaj gönderilemiyor.");
                 return;
             }
 
@@ -2367,8 +2227,8 @@
             const message = messageInput.value.trim();
 
             if (message === "") {
-                // Use a custom message box instead of alert
-                window.showCustomMessage("Boş mesaj gönderilemez.", "warning");
+                // showCustomMessage yerine console.error kullanıldı
+                console.error("Boş mesaj gönderilemez.");
                 return;
             }
 
@@ -2382,87 +2242,17 @@
                 messageInput.value = ''; // Mesajı gönderdikten sonra inputu temizle
             } catch (e) {
                 console.error("Mesaj eklenirken hata oluştu: ", e);
-                window.showCustomMessage("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.", "error");
+                // showCustomMessage yerine console.error kullanıldı
+                console.error("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
             }
         }
 
-        // Custom Message Box (replacing alert)
-        window.showCustomMessage = function(message, type = 'info', title = 'Bilgi', customClass = '', buttonText = 'Tamam') {
-            const modalId = 'customMessageModal';
-            let modal = document.getElementById(modalId);
+        // Custom Message Box fonksiyonu tamamen kaldırıldı.
+        // window.showCustomMessage = function(...) { ... }
 
-            // If modal doesn't exist, create it (should ideally be in HTML from start)
-            if (!modal) {
-                console.error("Custom message modal element not found in HTML!");
-                return;
-            }
-
-            const titleElement = modal.querySelector('#customMessageTitle');
-            const textElement = modal.querySelector('#customMessageText');
-            const buttonElement = modal.querySelector('#customMessageButton');
-            const modalContent = modal.querySelector('.bg-white');
-
-            // Set content and button text, with null checks
-            if (titleElement) {
-                titleElement.textContent = title;
-                titleElement.style.display = title ? '' : 'none'; // Hide if title is empty
-            }
-            if (textElement) {
-                textElement.innerHTML = message;
-            }
-            if (buttonElement) {
-                buttonElement.textContent = buttonText;
-                buttonElement.onclick = function() {
-                    modal.style.display = 'none';
-                };
-            }
-            
-            if (modalContent) {
-                // Reset classes and apply custom class
-                modalContent.className = 'bg-white rounded-lg p-6 shadow-xl w-full relative';
-                if (customClass) {
-                    modalContent.classList.add(customClass);
-                } else {
-                    modalContent.classList.add('max-w-sm', 'text-center'); // Default for small messages
-                }
-
-                // Set button color based on type
-                if (buttonElement) {
-                    buttonElement.classList.remove('bg-blue-500', 'bg-green-500', 'bg-yellow-500', 'bg-red-500', 'hover:bg-blue-600', 'hover:bg-green-600', 'hover:bg-yellow-600', 'hover:bg-red-600', 'bg-gray-300', 'text-gray-800', 'hover:bg-gray-400', 'text-sm');
-
-                    if (type === 'error') {
-                        buttonElement.classList.add('bg-red-500', 'hover:bg-red-600');
-                    } else if (type === 'warning') {
-                        buttonElement.classList.add('bg-yellow-500', 'hover:bg-yellow-600');
-                    } else if (type === 'info') {
-                        buttonElement.classList.add('bg-gray-300', 'text-gray-800', 'hover:bg-gray-400', 'text-sm');
-                    } else {
-                        buttonElement.classList.add('bg-blue-500', 'hover:bg-blue-600');
-                    }
-                }
-
-                // Set title color
-                if (titleElement) {
-                    titleElement.classList.remove('text-red-600', 'text-yellow-600', 'text-blue-600', 'text-green-600');
-                    if (type === 'error') {
-                        titleElement.classList.add('text-red-600');
-                    } else if (type === 'warning') {
-                        titleElement.classList.add('text-yellow-600');
-                    } else {
-                        titleElement.classList.add('text-blue-600');
-                    }
-                }
-            }
-
-            modal.style.display = 'flex';
-        }
-
-        // About modalı gösteren yeni fonksiyon
+        // About modalı gösteren fonksiyon (artık çağrılmıyor ve HTML'den kaldırıldığı için işlevsiz)
         window.showAboutModal = function() {
-            const aboutModal = document.getElementById('aboutModal');
-            if (aboutModal) {
-                aboutModal.style.display = 'flex';
-            }
+            // Bu fonksiyon artık kullanılmıyor.
         }
 
         // Görseli değiştiren fonksiyon
@@ -2471,7 +2261,14 @@
             if (!period) return;
 
             const subSection = period.subSections.find(sub => sub.id === subSectionId);
-            if (!subSection || subSection.images.length === 0) return;
+            if (!subSection || subSection.images.length === 0) {
+                 // Eğer görsel yoksa veya boşsa, yer tutucu görsel URL'si kullan
+                const imgElement = document.getElementById(`img-${periodKey}-${subSection.id}`);
+                if (imgElement) {
+                    imgElement.src = `https://placehold.co/300x200/CCCCCC/666666?text=Görsel+Yok`;
+                }
+                return;
+            }
 
             subSection.currentImageIndex = (subSection.currentImageIndex + 1) % subSection.images.length;
             const imgElement = document.getElementById(`img-${periodKey}-${subSection.id}`);
@@ -2502,18 +2299,14 @@
         // Modalı dışarı tıklayarak kapatma
         window.onclick = function(event) {
             const fullscreenModal = document.getElementById('fullscreenImageModal');
-            const customMessageModal = document.getElementById('customMessageModal');
-            const aboutModal = document.getElementById('aboutModal'); // Yeni about modalı
+            // const customMessageModal = document.getElementById('customMessageModal'); // Kaldırıldığı için yorum satırı yapıldı
 
             if (event.target == fullscreenModal) {
                 fullscreenModal.style.display = 'none';
             }
-            if (customMessageModal && event.target == customMessageModal) {
-                customMessageModal.style.display = 'none';
-            }
-            if (aboutModal && event.target == aboutModal) { // About modalı kapat
-                aboutModal.style.display = 'none';
-            }
+            // if (customMessageModal && event.target == customMessageModal) { // Kaldırıldığı için yorum satırı yapıldı
+            //     customMessageModal.style.display = 'none';
+            // }
         }
     </script>
 </body>
